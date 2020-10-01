@@ -147,7 +147,7 @@ var questions =[ {
         // Heading:
         var createH1 = document.createElement("h1");
         createH1.setAttribute("id", "createH1");
-        createH1.textContent = "All Done!"
+        createH1.textContent = "Game Over!"
     
         questionsDiv.appendChild(createH1);
     

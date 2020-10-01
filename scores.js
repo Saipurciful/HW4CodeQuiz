@@ -24,5 +24,5 @@ if (allScores !== null) {
 }
 // addEventListener to "goBack" button when click link back to HW4.html page
 goBack.addEventListener("click", function () {
-    window.location.replace("/hw4.html");
+    window.location.replace("./codeQuiz.html");
 });
