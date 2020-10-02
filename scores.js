@@ -26,8 +26,4 @@ if (allScores !== null) {
 // addEventListener to "goBack" button when click link back to index.html page
 goBack.addEventListener("click", function () {
     window.location.replace("./index.html");
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 6db5f8b1b70bf0fbbfb714134a8270d0f3c2e956

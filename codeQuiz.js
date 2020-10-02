@@ -128,7 +128,7 @@ var questions =[ {
     
         if (questionIndex >= questions.length) {
             // declare information in Game over page when the game is over
-            gameOver();
+            allDone();
             createDiv.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
         } else {
             render(questionIndex);
@@ -137,7 +137,7 @@ var questions =[ {
     
     }
     // 9. create function gameOver,create Element and set attribute
-    function GameOver() {
+    function allDone() {
         questionsDiv.innerHTML = "";
         currentTime.innerHTML = "";
     
