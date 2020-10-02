@@ -1,4 +1,4 @@
-// assign all 5 multiple choice questions to variable
+// 1. Array variable with objects that contained quiz details
 var questions =[ {
     title : "Inside which HTML element do we put the JavaScript?",
     choices: [
@@ -46,28 +46,25 @@ var questions =[ {
     },
     ];
     
-    // create empty variables
+    // 2. Create empty variables for score and questionIndex
     var score = 0;
     var questionIndex = 0;
     
-    // target Id from HTML to this .Js
+    // 3. using .querySelector to target Id from HTML and assign to variable
     var currentTime = document.querySelector("#currentTime");
     var timer = document.querySelector("#startQuiz");
     var questionsDiv = document.querySelector("#quizBox");
     var wrapper = document.querySelector("#box");
     
-    // Seconds left is 15 seconds per question:
+    // 4. Create variable for function when click
     var secondsLeft = 75;
-    // Holds interval time
     var holdInterval = 0;
-    // Holds penalty time
     var penalty = 10;
-    // Creates new element ul
     var ulCreate = document.createElement("ul");
     
-    // Triggers timer on button, shows user a display on the screen
+    // 5. create .addEventListener when click button, timer start to countdown
     timer.addEventListener("click", function () {
-        // We are checking zero because its originally set to zero
+        
         if (holdInterval === 0) {
             holdInterval = setInterval(function () {
                 secondsLeft--;
@@ -83,7 +80,7 @@ var questions =[ {
         render(questionIndex);
     });
     
-    // Renders questions and choices to page: 
+    // 6. create function render to display multiple choice questions
     
     function render(questionIndex) {
         questionsDiv.setAttribute("id", "question");
@@ -106,7 +103,7 @@ var questions =[ {
             listItem.addEventListener("click", (compare));
         })
     }
-    // Event to compare choices with answer
+    // 7. create function compare to compare user selected answer with corrected answer and if else condition.
     function compare(event) {
         var element = event.target;
     
@@ -126,12 +123,12 @@ var questions =[ {
             }
     
         }
-        // Question Index determines number question user is on
+        // 8. create if/else condition when questionIndex loop finish running 
         questionIndex++;
     
         if (questionIndex >= questions.length) {
-            // All done will append last page with user stats
-            allDone();
+            // declare information in Game over page when the game is over
+            gameOver();
             createDiv.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
         } else {
             render(questionIndex);
@@ -139,8 +136,8 @@ var questions =[ {
         questionsDiv.appendChild(createDiv);
     
     }
-    // All done will append last page
-    function allDone() {
+    // 9. create function gameOver,create Element and set attribute
+    function GameOver() {
         questionsDiv.innerHTML = "";
         currentTime.innerHTML = "";
     
@@ -157,7 +154,7 @@ var questions =[ {
     
         questionsDiv.appendChild(createP);
     
-        // Calculates time remaining and replaces it with score
+        // 10. convert time remaining to scores
         if (secondsLeft >= 0) {
             var timeRemaining = secondsLeft;
             var createP2 = document.createElement("p");
@@ -167,7 +164,7 @@ var questions =[ {
             questionsDiv.appendChild(createP2);
         }
     
-        // Label
+        // 11. create variable for Label, input, submit button
         var createLabel = document.createElement("label");
         createLabel.setAttribute("id", "createLabel");
         createLabel.textContent = "Enter your initials: ";
@@ -190,7 +187,7 @@ var questions =[ {
     
         questionsDiv.appendChild(createSubmit);
     
-        // Event listener to capture initials and local storage for initials and score
+        // 12. create .addEventListener when click, to submit user's input initials and scores.
         createSubmit.addEventListener("click", function () {
             var initials = createInput.value;
     
