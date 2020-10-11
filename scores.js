@@ -12,9 +12,11 @@ clear.addEventListener("click", function () {
 var allScores = localStorage.getItem("allScores");
 allScores = JSON.parse(allScores);
 
-// 4. reate loop for allScores and li for initials input from user
+// 4. create loop for allScores and li for initials input from user
 if (allScores !== null) {
-
+  allScores.sort(function(a,b){
+     return   parseInt(b.score) - parseInt(a.score)
+        });
     for (var i = 0; i < allScores.length; i++) {
 
         var createLi = document.createElement("li");
@@ -22,8 +24,11 @@ if (allScores !== null) {
         highScore.appendChild(createLi);
 
     }
-}
+};
+    
+    
+
 // addEventListener to "goBack" button when click link back to index.html page
 goBack.addEventListener("click", function () {
-    window.location.replace("./index.html");
+    window.location.replace("/index.html");
 });

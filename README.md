@@ -1,15 +1,16 @@
-+
+
 # HW4CodeQuiz
 ## About The Code Quiz Assignment.
 This assignment is about building a timed coding quiz  (on basic JavaScript fundamental) with multiple-choice questions. It's also stores high scores. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that I created. 
 ## How the app works?
 * When a user clicks the <button>Start Quiz</button> button, the app will present the user with multiple-choice questions, and the timer will start counting down.
 
-<img src= "./images/start.png" style = "width: 300px;"><br>
+<img src= "./images/start.png" style = "width: 300px;"> 
+<br>
+<img src= "./images/question.png"style = "width: 300px;">
+<br>
 
-<img src= "./images/question.png"style = "width: 300px;"><br>
-
-* If the user clicks a wrong answer, the timer will be deleted 10 seconds.
+* If the user clicks a wrong answer, the timer will be deleted 10 seconds
 
 <img src= "./images/wrong answer.png" style = "width: 300px;"><br>
 
@@ -63,4 +64,5 @@ This assignment is about building a timed coding quiz  (on basic JavaScript fund
 
     * Not Available
 
-    ## The site is published at -https://saipurciful.github.io/HW4CodeQuiz/
+    ## The site is published at 
+    - https://saipurciful.github.io/JS-CodeQuiz/
