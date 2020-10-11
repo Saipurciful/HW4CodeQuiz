@@ -21,8 +21,9 @@ This assignment is about building a timed coding quiz  (on basic JavaScript fund
 <img src= "./images/gameOver.png" style = "width: 300px;"><br>
 
 * After the user clicks <button>submit</button> button in <strong style="color: purple;">Game Over!</strong> page, the app will present <strong style="color: purple;">Highscores</strong> page which will show the user the previous submitted scores and initials. The page also has <button>Clear High Score </button>button and <button>Go Back</button> button
+* The Score also source by high score
 
-<img src= "./images/highscores.png" style = "width: 300px;"><br>
+<img src= "./images/sourcescore.png" style = "width: 300px;"><br>
 
 * <button>Clear high Score</button> button, if the user clicks this button, it will clear all previous submitted scores and initials on the page. 
 
