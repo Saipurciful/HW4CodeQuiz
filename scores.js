@@ -13,6 +13,7 @@ var allScores = localStorage.getItem("allScores");
 allScores = JSON.parse(allScores);
 
 // 4. create loop for allScores and li for initials input from user
+// add code that can source score by high score
 if (allScores !== null) {
   allScores.sort(function(a,b){
      return   parseInt(b.score) - parseInt(a.score)
